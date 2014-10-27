@@ -19,6 +19,10 @@ class TestSuite(unittest.TestCase):
         app = FizzBuzz()
         self.failIf(app.calc(5) != "Buzz")
 
+    def test_prime(self):
+	app = FizzBuzz()
+	self.failIf(app.calc(79) != "79 is a prime")
+
     def test_run(self):
         output = StringIO()
 
