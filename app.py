@@ -30,7 +30,7 @@ class FizzBuzz():
 		return j
 	elif(i % 5 == 0):
 		return k
-       	else:
+	else:
 		return i
 
 if __name__ == "__main__":
