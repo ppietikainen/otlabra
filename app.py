@@ -32,7 +32,7 @@ class FizzBuzz():
         for j in range(2, i):
             if i % j == 0:
                 return i
-        if i == 1:
+        if i < 2:
             return i
         return str(i) + " is a prime"
 
