@@ -15,14 +15,21 @@ class FizzBuzz():
     def __init__(self):
         pass
 
-    # Run from 1 to "end". Maybe. Test fails for some reason
+    # Run from 1 to "end + 1". Version 2 functionality
     def run(self, end, out=sys.stdout):
-        for i in range(1, end):
-            print >> out, self.calc(i)
+        for i in range(1, end + 1):
+            print >> out, self.calc(i)[0], self.calc(i)[1]
 
-    # Seems to give correct values. Tested with 1 and 2.
-    def calc(self, i):
-        return i
+    # Test the "primeness" of a single value
+    def calc(self, val):
+        message = ""
+        if val >= 2:
+            for i in range(2, val):
+                if val % i == 0:
+                    break
+            else:
+                message = "Is prime!"
+        return (val, message)
 
 if __name__ == "__main__":
     app = FizzBuzz()
