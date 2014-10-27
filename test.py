@@ -1,5 +1,6 @@
 import unittest
 import sys
+import random
 from StringIO import StringIO
 
 from app import FizzBuzz
@@ -9,6 +10,18 @@ class TestSuite(unittest.TestCase):
     def test_one(self):
         app = FizzBuzz()
         self.failIf(app.calc(1) != 1)
+
+    def test_three(self):
+        app = FizzBuzz()
+        self.failIf(app.calc(3) != "Fizz")
+
+    def test_five(self):
+        app = FizzBuzz()
+        self.failIf(app.calc(5) != "Buzz")
+
+    def test_prime(self):
+	app = FizzBuzz()
+	self.failIf(app.calc(79) != "79 is a prime")
 
     def test_run(self):
         output = StringIO()
