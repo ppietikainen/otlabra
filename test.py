@@ -1,4 +1,5 @@
 import unittest
+import random
 import sys
 from StringIO import StringIO
 
@@ -8,7 +9,7 @@ class TestSuite(unittest.TestCase):
 
     def test_one(self):
         app = FizzBuzz()
-        self.failIf(app.calc(1) != 1)
+        self.failIf(app.calc(random.randint(1, 100)) != 1)
 
     def test_run(self):
         output = StringIO()
