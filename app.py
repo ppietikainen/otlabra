@@ -18,7 +18,15 @@ class FizzBuzz():
     # Run from 1 to "end". Maybe. Test fails for some reason
     def run(self, end, out=sys.stdout):
         for i in range(1, end+1):
-            print >> out, self.calc(i)
+		if float(i) % 5 == 0:
+			if float(i) % 3 == 0:
+				print >> out, "FizzBuzz"
+			else:
+				print >> out, "Buzz"
+		elif float(i) % 3 == 0:
+			print >> out, "Fizz"
+		else:
+	            	print >> out, self.calc(i)
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
