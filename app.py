@@ -11,6 +11,17 @@ import sys
 # Version 2: if number is prime, print "<number> is a prime" instead
 #            Take one argument,  and count up to it
 
+def isPrime(num):
+    if(num != 1):
+        a = num - 1
+        while(a > 1):
+            if(num % a == 0):
+                return False
+            a -= 1
+        return True
+    else:
+        return False
+
 class FizzBuzz():
     def __init__(self):
         pass
@@ -22,8 +33,14 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        return i
+        if(isPrime(i)):
+            return ("%d is a prime" %i)
+        else:
+            return i
 
 if __name__ == "__main__":
-    app = FizzBuzz()
-    app.run(100)
+    if(len(sys.argv) == 2):
+        app = FizzBuzz()
+        app.run(int(sys.argv[1]))
+    else:
+        print "Too few or many arguments given"
