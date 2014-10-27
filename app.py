@@ -22,7 +22,18 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        return i
+	j = "Fizz"
+	k = "Buzz"
+
+	if (i % 3 == 0 and i % 5 == 0):
+		return j+k
+	if (i % 3 == 0):
+		return j
+	if (i % 5 == 0):
+		return k
+	if (i §
+	else:
+        	return i
 
 if __name__ == "__main__":
     app = FizzBuzz()
