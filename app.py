@@ -22,13 +22,18 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        if i % 15 == 0:
-            return "FizzBuzz"
-        if i % 3 == 0:
-            return "Fizz"
-        if i % 5 == 0:
-            return "Buzz"
-        return i
+        #if i % 15 == 0:
+        #    return "FizzBuzz"
+        #if i % 3 == 0:
+        #    return "Fizz"
+        #if i % 5 == 0:
+        #    return "Buzz"
+        #return i
+        for j in range(2, i):
+            if i % j == 0:
+                return i
+        
+        return str(i) + " is a prime"
 
 if __name__ == "__main__":
     app = FizzBuzz()
