@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 
-# Implementation of FizzBuzz v0.00
+# Implementation of FizzBuzz v0brackets python.00
 
 # Version 1: if number is divisible by 3, print Fizz
 #            if number is divisible by 5, print Buzz
@@ -17,7 +17,7 @@ class FizzBuzz():
 
     # Run from 1 to "end". Maybe. Test fails for some reason
     def run(self, end, out=sys.stdout):
-        for i in range(1, end):
+        for i in range(1, end + 1):
             print >> out, self.calc(i)
 
     # Seems to give correct values. Tested with 1 and 2.
