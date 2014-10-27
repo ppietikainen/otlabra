@@ -17,7 +17,7 @@ class FizzBuzz():
 
     # Run from 1 to "end". Maybe. Test fails for some reason
     def run(self, end, out=sys.stdout):
-        for i in range(0, end):
+        for i in range(1, end + 1):
             print >> out, self.calc(i)
 
     # Seems to give correct values. Tested with 1 and 2.
@@ -32,7 +32,8 @@ class FizzBuzz():
         for j in range(2, i):
             if i % j == 0:
                 return i
-        
+        if i == 1:
+            return i
         return str(i) + " is a prime"
 
 if __name__ == "__main__":
