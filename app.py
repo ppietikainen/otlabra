@@ -26,6 +26,8 @@ class FizzBuzz():
 	k = "Buzz"
 	if(i % 3 == 0 and i % 5 == 0):
 		return j + k
+	elif(i % 3 == 0):
+		return j
 	elif(i % 5 == 0):
 		return k
        	else:
