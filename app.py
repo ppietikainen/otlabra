@@ -30,8 +30,16 @@ class FizzBuzz():
 	    return j
 	elif (i % 5 == 0): 
 	    return k
-        else:    	
-            return i
+
+
+        if i == 1:
+	    return i
+        for x in range(2, i):
+	    if i % x == 0:
+	        return i
+        else:
+	        return "%d is a prime" % i
+
 
 if __name__ == "__main__":
     app = FizzBuzz()
