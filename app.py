@@ -18,13 +18,14 @@ class FizzBuzz():
     # Run from 1 to "end + 1". Version 1 functionality.
     def run(self, end, out=sys.stdout):
         for i in range(1, end + 1):
-            print >> out, self.calc(i)
+            message = ""
             if i % 3 == 0 and i % 5 == 0:
-                print "FizzBuzz"
+                message = "FizzBuzz"
             elif i % 3 == 0:
-                print "Fizz"
+                message = "Fizz"
             elif i % 5 == 0:
-                print "Buzz"
+                message = "Buzz"
+            print >> out, self.calc(i), message
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
