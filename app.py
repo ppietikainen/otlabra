@@ -15,10 +15,15 @@ class FizzBuzz():
     def __init__(self):
         pass
 
-    # Run from 1 to "end + 1".
+    # Run from 1 to "end + 1". Version 2 functionality
     def run(self, end, out=sys.stdout):
         for i in range(1, end + 1):
             print >> out, self.calc(i)
+            for j in range(2, i):
+                if i % j == 0:
+                    break;
+            else:
+                print "Is prime!"
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
