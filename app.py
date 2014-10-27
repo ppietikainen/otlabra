@@ -46,4 +46,4 @@ class FizzBuzz():
 
 if __name__ == "__main__":
     app = FizzBuzz()
-    app.run(100)
+    app.run(int(sys.argv[1]))
