@@ -15,7 +15,7 @@ class FizzBuzz():
     def __init__(self):
         pass
 
-    # Run from 1 to "end". Maybe. Test fails for some reason
+    # Run from 1 to "end + 1".
     def run(self, end, out=sys.stdout):
         for i in range(1, end + 1):
             print >> out, self.calc(i)
