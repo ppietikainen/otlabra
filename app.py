@@ -44,7 +44,12 @@ class Primes():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        return i
+	if (i < 2):
+		return i
+	for x in range(2, i):
+		if (i % x == 0):
+			return i
+        return str(i) + " is a prime"
 
 
 

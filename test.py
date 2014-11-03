@@ -2,7 +2,7 @@ import unittest
 import sys
 from StringIO import StringIO
 
-from app import FizzBuzz
+from app import FizzBuzz, Primes
 
 class TestSuite(unittest.TestCase):
 
@@ -30,15 +30,15 @@ class TestSuite(unittest.TestCase):
         app = FizzBuzz()
         self.failIf(app.calc(705) != "FizzBuzz")
 
-    def prime_test_1(self):
+    def test_1(self):
         app = Primes()
         self.failIf(app.calc(11) != "11 is a prime")
 
-    def prime_test_big(self):
+    def test_big(self):
         app = Primes()
         self.failIf(app.calc(5077) != "5077 is a prime")
 
-    def prime_test_notaprime(self):
+    def test_notaprime(self):
         app = Primes()
         self.failIf(app.calc(5076) == "5076 is a prime")
 
