@@ -22,12 +22,6 @@ class TestSuite(unittest.TestCase):
 	app = FizzBuzz()
 	self.failIf(app.calc(15) != "FizzBuzz")
 
-    def test_primes(self):
-	app = FizzBuzz()
-	primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-	for i in primes:
-	    self.failIf(app.calc(i) != "%d is a prime" % i)
-
     def test_run(self):
         output = StringIO()
 
