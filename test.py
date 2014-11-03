@@ -12,11 +12,11 @@ class TestSuite(unittest.TestCase):
 	
     def test_divisible_by_three(self):
     	app = FizzBuzz()
-	self.failIf(app.calc(3) != "Fizz")
+	self.failIf(app.calc(6) != "Fizz")
 	
     def test_divisible_by_five(self):
         app = FizzBuzz()
-	self.failIf(app.calc(5) != "Buzz")
+	self.failIf(app.calc(10) != "Buzz")
 	
     def test_divisible_by_both(self):
         app = FizzBuzz()
@@ -28,7 +28,7 @@ class TestSuite(unittest.TestCase):
 	app = FizzBuzz()
 	app.run(10, output)
 	
-	self.failIf(output.getvalue().splitlines().count("Fizz") != 3)
+	self.failIf(output.getvalue().splitlines().count("Fizz") != 2)
 
     def test_correct_number_of_buzz(self):
         output = StringIO()
@@ -36,7 +36,7 @@ class TestSuite(unittest.TestCase):
 	app = FizzBuzz()
 	app.run(20, output)
 	
-	self.failIf(output.getvalue().splitlines().count("Buzz") != 3)
+	self.failIf(output.getvalue().splitlines().count("Buzz") != 2)
 	
     def test_correct_number_of_fizzbuzz(self):
         output = StringIO()
