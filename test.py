@@ -1,6 +1,9 @@
 import unittest
 import sys
-from StringIO import StringIO
+try:
+    from StringIO import StringIO
+else:
+    from io import StringIO
 
 from app import FizzBuzz
 
