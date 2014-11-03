@@ -29,6 +29,10 @@ class TestSuite(unittest.TestCase):
 
         self.failIf(app.calc(15) != "FizzBuzz")
 
+    #test string printing
+    def test_string(self):
+	app = FizzBuzz()
+	self.failUnless(isinstance(app.calc(4),int))
 
     def test_run(self):
         output = StringIO()
