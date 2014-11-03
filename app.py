@@ -30,6 +30,30 @@ class FizzBuzz():
 	    return "Buzz"
         return i
 
+    def printPrime(self, number):
+	out = []
+	primes = [2]
+        # no need to start from 2
+	for i in range(3, number + 1):
+	    isPrime = 1
+	    for j in range(len(primes)):
+		#number is not prime
+		if i % primes[j] == 0:
+		    isPrime = 0
+		    break
+	    if isPrime == 1:
+		primes.append(i)
+
+	for i in range(1,number+1):
+	    if len(primes) > 0 and i == primes[0]:
+		out.append("<number> is a prime")
+		primes.pop(0)
+	    else:
+		out.append(i) 
+	return out
+
 if __name__ == "__main__":
     app = FizzBuzz()
     app.run(100)
+   
+    app.printPrime(10)

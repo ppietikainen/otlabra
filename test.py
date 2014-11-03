@@ -29,6 +29,15 @@ class TestSuite(unittest.TestCase):
 
         self.failIf(app.calc(15) != "FizzBuzz")
 
+    #check prime printing
+    def test_prime(self):
+	app = FizzBuzz()
+
+	numbers = app.printPrime(5)
+
+	
+	self.failIf(numbers[2-1] != "<number> is a prime")
+	self.failIf(numbers[5-1] != "<number> is a prime")
 
     def test_run(self):
         output = StringIO()
