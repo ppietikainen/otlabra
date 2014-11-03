@@ -22,7 +22,9 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        if (i % 3 == 0 and i % 5 == 0):
+        if (self.isPrime(i)):
+	    return str(i) + " is a prime number"
+        elif (i % 3 == 0 and i % 5 == 0):
 	    return "FizzBuzz"
     	elif (i % 3 == 0):
 	    return "Fizz"
@@ -31,6 +33,8 @@ class FizzBuzz():
         return i
 	
     def isPrime(self, number):
+        if (number <= 1):
+	    return False
         for i in range(2, number):
 	    if (number % i == 0):
 	        return False
