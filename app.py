@@ -29,6 +29,12 @@ class FizzBuzz():
 	elif (i % 5 == 0):
 	    return "Buzz"
         return i
+	
+    def isPrime(self, number):
+        for i in range(2, number):
+	    if (number % i == 0):
+	        return False
+	return True
 
 if __name__ == "__main__":
     app = FizzBuzz()
