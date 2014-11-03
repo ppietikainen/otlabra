@@ -13,13 +13,22 @@ class TestSuite(unittest.TestCase):
     #test division by three
     def test_three_division(self):
 	app = FizzBuzz()
-	output = StringIO()
+	
+	self.failIf(app.calc(3) != "Fizz")
 
-	app.run(10, output)
-	i = 1
-	for line in output.getvalue().splitlines():
-	    self.failIf(i %% 3 = 0 and line != "Fizz")
+    #test division by five
+    def test_five_division(self):
+        app = FizzBuzz()
+
+        self.failIf(app.calc(5) != "Buzz")
 	 
+    #test division by three and five
+    def test_three_and_five_division(self):
+        app = FizzBuzz()
+        output = StringIO()
+
+        self.failIf(app.calc(15) != "FizzBuzz")
+
 
     def test_run(self):
         output = StringIO()
