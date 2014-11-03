@@ -24,6 +24,8 @@ class FizzBuzz():
     def calc(self, i):
     	if (i % 3 == 0):
 	    return "Fizz"
+	elif (i % 5 == 0):
+	    return "Buzz"
         return i
 
 if __name__ == "__main__":
