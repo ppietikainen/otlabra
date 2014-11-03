@@ -41,5 +41,13 @@ class FizzBuzz():
 	return True
 
 if __name__ == "__main__":
+    args = sys.argv
+    count = 100
+    if (len(args) > 1):
+        try:
+            count = int(args[1])
+	except ValueError:
+	    count = 100
+
     app = FizzBuzz()
-    app.run(100)
+    app.run(count)
