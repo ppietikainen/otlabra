@@ -22,6 +22,8 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
+    	if (i % 3 == 0):
+	    return "Fizz"
         return i
 
 if __name__ == "__main__":
