@@ -17,6 +17,10 @@ class TestSuite(unittest.TestCase):
     def test_three(self):
         app = FizzBuzz()
 	self.failIf(app.calc(5) != "Buzz")
+	
+    def test_four(self):
+        app = FizzBuzz()
+	self.failIf(app.calc(15) != "FizzBuzz")
 
     def test_run(self):
         output = StringIO()
