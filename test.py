@@ -9,6 +9,17 @@ class TestSuite(unittest.TestCase):
     def test_one(self):
         app = FizzBuzz()
         self.failIf(app.calc(1) != 1)
+    
+    #test division by three
+    def test_three_division(self):
+	app = FizzBuzz()
+	output = StringIO()
+
+	app.run(10, output)
+	i = 1
+	for line in output.getvalue().splitlines():
+	    self.failIf(i %% 3 = 0 and line != "Fizz")
+	 
 
     def test_run(self):
         output = StringIO()
