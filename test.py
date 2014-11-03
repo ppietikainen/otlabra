@@ -12,33 +12,22 @@ class TestSuite(unittest.TestCase):
 
     def test_three(self):
 	app = FizzBuzz()
-<<<<<<< HEAD
-	self.failIf(app.calc(3) != "Fizz")
-
-    def test_five(self):
-	app = FizzBuzz()
-	self.failIf(app.calc(5) != "Buzz")
-=======
 	self.failIf(app.calc(6) != "Fizz")
 
     def test_five(self):
 	app = FizzBuzz()
 	self.failIf(app.calc(10) != "Buzz")
->>>>>>> prime
 
     def test_fifteen(self):
 	app = FizzBuzz()
 	self.failIf(app.calc(15) != "FizzBuzz")
 
-<<<<<<< HEAD
-=======
     def test_prime(self):
 	app = FizzBuzz()
 	primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 	for i in primes:
 	    self.failIf(app.calc(i) != "%d is a prime" % i)
 
->>>>>>> prime
     def test_run(self):
         output = StringIO()
 
@@ -59,13 +48,8 @@ class TestSuite(unittest.TestCase):
 
         self.failIf(len(output.getvalue().splitlines()) != 100)
 	self.failIf(fizzbuzz != 6)
-<<<<<<< HEAD
-	self.failIf(fizz != 27)
-	self.failIf(buzz != 14)
-=======
 	self.failIf(fizz != 26)
 	self.failIf(buzz != 13)
->>>>>>> prime
 
 def main():
     unittest.main()

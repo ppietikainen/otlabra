@@ -22,13 +22,9 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-<<<<<<< HEAD
-        if i % 3 == 0 and i % 5 == 0:
-=======
 	if self.calcPrime(i) == 1:
 	    return "%d is a prime" % i
         elif i % 3 == 0 and i % 5 == 0:
->>>>>>> prime
 	    return "FizzBuzz"
 	elif i % 3 == 0:
 	    return "Fizz"
@@ -36,8 +32,6 @@ class FizzBuzz():
 	    return "Buzz"
         else:
             return i
-<<<<<<< HEAD
-=======
 
     # Prime number calculation
     # Return 1 if prime number
@@ -51,7 +45,6 @@ class FizzBuzz():
 	    return 1
         else:
 	    return 0
->>>>>>> prime
 
 if __name__ == "__main__":
     app = FizzBuzz()
