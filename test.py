@@ -46,6 +46,10 @@ class TestSuite(unittest.TestCase):
 	
 	self.failIf(output.getvalue().splitlines().count("FizzBuzz") != 2)
 
+    def test_prime_one(self):
+        app = FizzBuzz()
+	self.failIf(app.isPrime(5) == False)
+
     def test_run(self):
         output = StringIO()
 
