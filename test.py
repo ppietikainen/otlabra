@@ -32,12 +32,12 @@ class TestSuite(unittest.TestCase):
 	buzz = 0
 	fizzbuzz = 0
 
-	for i in output.getvalue():
-	    if i == "Fizz":
+	for i in output.getvalue().splitlines():
+	    if i.strip() == "Fizz":
 		fizz += 1
-	    elif i == "Buzz":
+	    elif i.strip() == "Buzz":
 		buzz += 1
-	    elif i == "FizzBuzz":
+	    elif i.strip() == "FizzBuzz":
 		fizzbuzz += 1
 
         self.failIf(len(output.getvalue().splitlines()) != 100)
