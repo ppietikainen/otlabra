@@ -10,18 +10,18 @@ class TestSuite(unittest.TestCase):
         app = FizzBuzz()
         self.failIf(app.calc(1) != 1)
 	
-    def test_two(self):
+    def test_divisible_by_three(self):
     	app = FizzBuzz()
 	self.failIf(app.calc(3) != "Fizz")
 	
-    def test_three(self):
+    def test_divisible_by_five(self):
         app = FizzBuzz()
 	self.failIf(app.calc(5) != "Buzz")
 	
-    def test_four(self):
+    def test_divisible_by_both(self):
         app = FizzBuzz()
 	self.failIf(app.calc(15) != "FizzBuzz")
-
+	
     def test_run(self):
         output = StringIO()
 
