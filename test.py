@@ -22,6 +22,30 @@ class TestSuite(unittest.TestCase):
         app = FizzBuzz()
 	self.failIf(app.calc(15) != "FizzBuzz")
 	
+    def test_correct_number_of_fizz(self):
+        output = StringIO()
+	
+	app = FizzBuzz()
+	app.run(10, output)
+	
+	self.failIf(output.getvalue().splitlines().count("Fizz") != 3)
+
+    def test_correct_number_of_buzz(self):
+        output = StringIO()
+	
+	app = FizzBuzz()
+	app.run(20, output)
+	
+	self.failIf(output.getvalue().splitlines().count("Buzz") != 3)
+	
+    def test_correct_number_of_fizzbuzz(self):
+        output = StringIO()
+	
+	app = FizzBuzz()
+	app.run(40, output)
+	
+	self.failIf(output.getvalue().splitlines().count("FizzBuzz") != 2)
+
     def test_run(self):
         output = StringIO()
 
