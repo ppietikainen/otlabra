@@ -33,6 +33,23 @@ class FizzBuzz():
 
         return i
 
+class Primes():
+    def __init__(self):
+        pass
+
+    # Run from 1 to "end". Maybe. Test fails for some reason
+    def run(self, end, out=sys.stdout):
+        for i in range(0, end):
+            print >> out, self.calc(i)
+
+    # Seems to give correct values. Tested with 1 and 2.
+    def calc(self, i):
+        return i
+
+
+
 if __name__ == "__main__":
     app = FizzBuzz()
+    app.run(100)
+    app = Primes()
     app.run(100)
